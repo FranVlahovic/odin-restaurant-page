@@ -8,10 +8,11 @@
 }
 
 :root {
-  --main-blue-color: #44bede;
+  --main-blue-color: #0b1d38;
   --main-second-color: #eeeeee;
+  --font-primary: #ddbc8d;
   --icons-primary-color: brightness(0) saturate(100%) invert(97%) sepia(9%) saturate(339%) hue-rotate(259deg) brightness(118%) contrast(87%);
-  --icons-second-color: brightness(0) saturate(100%) invert(83%) sepia(22%) saturate(7480%) hue-rotate(333deg) brightness(98%) contrast(93%);
+  --icons-second-color: brightness(0) saturate(100%) invert(78%) sepia(50%) saturate(245%) hue-rotate(354deg) brightness(92%) contrast(88%);
 }
 
 img {
@@ -25,54 +26,58 @@ body {
   grid-template-areas: 
   "header"
   "content"
-  "footer";
+  "footer"
+  "copyright";
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto;
   height: 100vh;
-
 
 }
 
 header {
   display: flex;
   grid-area: header;
-  padding: 1em 1.7em;
+  padding: 1em 3em;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
-  background-color: rgba(68, 190, 222, 0.85);
-  z-index: 1000; /* Keeps header on top */
+  background-color: rgba(11, 29, 56, 0.9);
+  z-index: 1000;
 }
 
 .header-logo {
   font-family: "Dokdo";
-  font-weight: 100;
-  color: var(--main-second-color);
-  font-size: 2.5em;
+  font-weight: 100; 
+  color: var(--font-primary);
+  font-size: 2.5em; 
 }
 
 nav, .footer-nav {
   display: flex;
   gap: 4em;
-  border-right: 2px solid var(--main-second-color);
+  border-right: 2px solid var(--font-primary);
   padding-right: 2em;
 }
 .footer-nav {
     border: none;
 }
 
-nav button, .footer-nav button {
+nav button {
   border: none;
   background-color: transparent;
   color: var(--main-second-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  font-weight: 400;
   cursor: pointer;
 }
 
 nav button {
     font-size: 0.95em;
+}
+
+nav button:hover {
+    border-bottom: 2px solid var(--font-primary);
 }
 .footer-nav button {
     font-size: 0.9em;
@@ -103,27 +108,67 @@ footer {
   background-color: var(--main-blue-color);
   display: flex;
   grid-area: footer;
-  flex-direction: column;
-  justify-content: space-evenly;
+  padding: 2em 3em;
+  justify-content: space-between;
   gap: 1.5em;
-  align-items: center;
-  padding: 1em 1.7em;
   border-top: 2px solid var(--main-second-color);
 }
 
-.footer-social-media {
+.footer-section {
     display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-left: 2px solid var(--font-primary);
+    padding-left: 2em;
+    color: var(--main-second-color);
     width: 20%;
-    justify-content: center;
-    gap: 2em;
+    gap: 1em;
 }
-.footer-social-media img {
-    width: 12%;
-    border: 2px solid var(--main-second-color);
-    border-radius: 2em;
-    padding: 0.4em;
+
+.footer-section h2 {
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.footer-section p {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.footer-nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2em;
+}
+.footer-nav-buttons button {
+    border: none;
+    background-color: transparent;
+    color: var(--main-second-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.footer-nav-buttons button:hover {
+    border-left: 2px solid var(--font-primary);
+    padding-left: 0.8em;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5em;
+}
+.footer-socials img {
+    width: 9%;
     filter: var(--icons-primary-color);
     cursor: pointer;
+}
+
+.copyright {
+    grid-area: copyright;
+    display: flex;
+    justify-content: center;
+    padding: 0.6em;
+    background-color: #0b1d38;
+    border-top: 1px solid var(--main-second-color);
 }
 
 a {
@@ -143,8 +188,5 @@ a:visited {
 .github-icon {
     width: 12%;
     display: inline-block;
-    filter: var(--icons-primary-color);
-}
-.github-icon {
-    color: var(--main-second-color);
+    filter: var(--icons-second-color);
 }
