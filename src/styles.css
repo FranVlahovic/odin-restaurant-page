@@ -8,7 +8,7 @@
 }
 
 :root {
-  --main-blue-color: #0b1d38;
+  --main-blue-color: #111111;
   --main-second-color: #eeeeee;
   --font-primary: #ddbc8d;
   --icons-primary-color: brightness(0) saturate(100%) invert(97%) sepia(9%) saturate(339%) hue-rotate(259deg) brightness(118%) contrast(87%);
@@ -42,7 +42,7 @@ header {
   align-items: center;
   position: fixed;
   width: 100%;
-  background-color: rgba(11, 29, 56, 0.5);
+  background-color: rgba(2, 3, 5, 0.2);
   z-index: 1000;
 }
 
@@ -101,65 +101,145 @@ nav button:hover {
 
 #content {
   grid-area: content;
-  background-color: #0d1827;
+  background-color: var(--main-blue-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
 }
 
 .home-restaurant {
     width: 100%;
     height: 60rem;
     object-fit: cover;
+    margin-bottom: 4em;
 }
-.home-reservation-button {
+.home-reservation-button, .learn-more-button, .view-all {
     border: 3px solid var(--font-primary);
     background-color: transparent;
     margin-top: 1.2em;
     padding: 1.2em;
-
-}
-
-.home-reservation {
-    display: flex;
-    padding: 5em 0em;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 2px solid var(--main-second-color);
-}
-
-.home-reservation-img {
-    height: 40rem;
-    width: 40rem;
-    object-fit: cover;
-    border: 2px solid var(--font-primary);
-    
-}
-
-.reservation-container {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    align-items: center;
-    gap: 1em;
-}
-.reservation-container p {
-    font-size: 1.4em;
-    line-height: 1.7em;
-    color: var(--main-second-color);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-.reservation-container h1 {
-    font-size: 3em;
-    color: var(--font-primary);
-}
-.reservation-container button {
     color: var(--main-second-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     cursor: pointer;
 }
 
+.view-all {
+    width: 10rem;
+}
+
+.home-reservation, .home-story {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3em 0 3em 0;
+    
+}
+.home-story {
+    position: relative;
+    background-image: url("img/pasta_making.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50rem;
+    border-bottom: 2px solid var(--font-primary);
+    border-top: 2px solid var(--font-primary);
+}
+.home-story::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.home-featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.featured-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 0.7em;
+}
+
+.featured-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 50rem;
+}
+
+.home-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+.customer-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+.customer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    border: 2px solid var(--font-primary);
+    width: 25%;
+    padding: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--main-second-color);
+    font-size: 1.2em;
+}
+.customer-card h3 {
+    color: var(--font-primary);
+}
+
+.home-reservation-img {
+    height: 40rem;
+    width: 70rem;
+    object-fit: cover;
+}
+
+.reservation-container, .story-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    gap: 1em;
+}
+.story-container {
+    position: relative;
+    z-index: 2;
+}
+
+.reservation-container p, .story-container p {
+    font-size: 1.4em;
+    line-height: 1.7em;
+    color: var(--main-second-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+h1 {
+    font-size: 2.7em;
+    color: var(--font-primary);
+}
+
+.home-featured h1 {
+    align-self: flex-start;
+    padding-left: 0.4em;
+}
+
 footer {
-  background-color: #0d1827;
+  background-color: var(--main-blue-color);
   display: flex;
   grid-area: footer;
   padding: 2em 3em;
@@ -186,6 +266,13 @@ footer {
 .footer-section p {
     font-size: 1em;
     line-height: 1.4em;
+}
+.footer-section p a {
+    display: inline;
+    color: var(--main-second-color);
+}
+.footer-section p a:visited {
+    color: var(--main-second-color);
 }
 
 .footer-nav-buttons {
@@ -221,7 +308,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 0.6em;
-    background-color: #0f1b2b;
+    background-color: #0f0f0f;
     border-top: 1px solid var(--main-second-color);
 }
 
