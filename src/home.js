@@ -3,6 +3,7 @@ import bologneseImage from './img/home-bolognese.jpg';
 import cacioepepeImage from './img/home-cacioepepe.jpeg';
 import carbonaraImage from './img/home-carbonara.jpg';
 import reservationImage from './img/home-reservation.jpg';
+import renderAbout from './about';
 
 const renderHome = () => {
     const contentContainer = document.querySelector("#content");
@@ -30,6 +31,7 @@ const renderHome = () => {
         const storyButton = document.createElement("button");
         storyButton.classList.add("learn-more-button");
         storyButton.textContent = "LEARN MORE";
+        storyButton.addEventListener("click", renderAbout);
 
         storyContainer.appendChild(storyHeading);
         storyContainer.appendChild(storyParagraph);
