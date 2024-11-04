@@ -1,12 +1,12 @@
 import restaurantTerrace from './img/restaurant_terrace.jpg';
 import restaurantOldEating from './img/history_eating.jpg';
 import restaurantOldGroup from './img/history_group.jpg';
-import freshImageOne from './img/fresh1';
-import freshImageTwo from './img/fresh2';
-import freshImageThree from './img/fresh3';
-import freshImageFour from './img/fresh4';
-import freshImageFive from './img/fresh5';
-import freshImageSix from './img/fresh6';
+import freshImageOne from './img/fresh1.jpg';
+import freshImageTwo from './img/fresh2.jpg';
+import freshImageThree from './img/fresh3.jpg';
+import freshImageFour from './img/fresh4.jpg';
+import freshImageFive from './img/fresh5.jpg';
+import freshImageSix from './img/fresh6.jpg';
 
 
 const createContentHeader = (imgSrc, imgAlt, headingText) => {
@@ -78,35 +78,35 @@ const renderAbout = () => {
         freshProductsHeading.textContent = "Daily Fresh Products";
 
         const freshProductsParagraph = document.createElement("p");
-        freshProductsParagraph.textContent = "At Dieci Piatti, we believe that exceptional dishes begin with the finest ingredients. Every day, our team carefully selects fresh, locally-sourced produce, artisanal cheeses, and the highest quality meats to bring the authentic taste of Italy to your table. From our hand-rolled pasta to our house-made sauces, we are committed to using only the freshest ingredients to create meals that are as wholesome as they are delicious. This dedication to quality ensures that every bite at Dieci Piatti is a celebration of Italian culinary tradition."
+        freshProductsParagraph.textContent = "At Dieci Piatti, we believe that exceptional dishes begin with the finest ingredients. Every day, our team carefully selects fresh, locally-sourced produce, artisanal cheeses, and the highest quality meats to bring the authentic taste of Italy to your table. From our hand-rolled pasta to our house-made sauces, we are committed to using only the freshest ingredients to create meals that are as wholesome as they are delicious. This dedication to quality ensures that every bite is a celebration of Italian culinary tradition."
 
         const freshProductsGallery = document.createElement("div");
         freshProductsGallery.classList.add("fresh-products-gallery");
 
         const images = [
             {
-                src:freshImageOne
-                alt: 
+                src:freshImageOne,
+                alt: "Tomato Harvest"
             },
             {
-                src:freshImageTwo
-                alt: 
+                src:freshImageTwo,
+                alt: "Wheat farm"
             },
             {
-                src:freshImageThree
-                alt: 
+                src:freshImageThree,
+                alt: "Grape Collecting"
             },
             {
-                src:freshImageFour
-                alt: 
+                src:freshImageFour,
+                alt: "Fisherman with his fishing net"
             },
             {
-                src:freshImageFive
-                alt: 
+                src:freshImageFive,
+                alt: "Cows"
             },
             {
-                src:freshImageSix
-                alt: 
+                src:freshImageSix,
+                alt: "Mix of fresh vegetables"
             },
         ];
 
@@ -117,14 +117,43 @@ const renderAbout = () => {
             freshProductsGallery.appendChild(img);
         });
 
+        freshProducts.appendChild(freshProductsHeading);
+        freshProducts.appendChild(freshProductsParagraph);
+        freshContainer.appendChild(freshProducts);
+        freshContainer.appendChild(freshProductsGallery);
+
         return freshContainer;
     };
-    //About Chef
-    const createAboutChef = () => {
 
-    };
-    //About Team
     const createAboutTeam = () => {
+        const teamContainer = document.createElement("div");
+        teamContainer.classList.add("team-container");
+
+        const teamHeading = document.createElement("h1");
+        teamHeading.textContent = "Our Team";
+
+        const teamImage = document.createElement("img");
+        teamImage.src = 
+        teamImage.alt = "Restaurant Staff"
+
+        const teamParagraph = document.createElement("p");
+        teamParagraph.textContent = "Our team is the heart and soul of everything we do. Each member brings a unique blend of passion, skill, and dedication, ensuring that every dish we serve is a true reflection of Italian culinary tradition. From our talented chefs who craft exquisite pasta dishes, to our attentive service staff who create a warm and welcoming atmosphere, every individual plays a crucial role in our success. We believe that the strength of our team lies in our shared commitment to excellence, and it's this collective effort that makes dining at Dieci Piatti an unforgettable experience.";
+
+        const chefContainer = document.createElement("div");
+        chefContainer.classList.add("chef-container");
+
+        const chefSubContainer = document.createElement("div");
+        chefSubContainer.classList.add("chef-sub-container");
+
+        const chefHeading = document.createElement("h1");
+        chefHeading.textContent = "Chef Marco Rossi";
+
+        const chefParagraph = document.createElement("p");
+        chefParagraph.textContent = "Marco Rossi, our esteemed chef at Dieci Piatti, hails from the heart of Tuscany. Growing up in Montepulciano, he was inspired by his grandmother's traditional recipes and the rich culinary heritage of Italy. With over 20 years of experience in renowned kitchens, Chef Marco brings a passion for fresh, locally-sourced ingredients and innovative takes on classic dishes. His dedication to authenticity and quality transforms simple ingredients into unforgettable meals, making every dining experience at Dieci Piatti a celebration of Italian cuisine.";
+
+        const chefImage = document.createElement("img");
+        chefImage.src = 
+        chefImage.alt = "Chef Image";
 
     };
 
