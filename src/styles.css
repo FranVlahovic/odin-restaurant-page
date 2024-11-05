@@ -246,6 +246,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 4px solid var(--font-primary);
 }
 .content-header-container img {
     width: 100%;
@@ -269,7 +270,7 @@ h1 {
     font-size: 3.5em;
 }
 
-.history-container, .fresh-container {
+.history-container, .fresh-container, .team-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,7 +278,9 @@ h1 {
     gap: 2em;
     padding: 3em 3em;
 }
-.history-container p, .fresh-products p {
+
+
+.history-container p, .fresh-products p, .team-container p{
     font-size: 1.4em;
     line-height: 2em;
     color: var(--main-second-color);
@@ -288,7 +291,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
     text-align: center;
     width: 80%;
 }
@@ -300,10 +303,46 @@ h1 {
     gap: 0.5em;
 }
 
-.fresh-products-gallery img {
+.fresh-products-gallery img, .main-gallery img {
     width: 100%; 
     height: 40rem; 
     object-fit: cover;
+}
+
+.team-container img {
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.team-container, .fresh-container {
+    border-bottom: 2px solid var(--font-primary);
+    padding-bottom: 6em;
+}
+
+.chef-container {
+    display: flex;
+    justify-content: space-between;
+}
+.chef-container img {
+    width: 45rem;
+    height: 50rem;
+    object-fit: cover;
+}
+
+.chef-sub-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1em;
+}
+
+.main-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5em;
+    width: 95%;
+    padding: 2em 0em 3em 0em;
 }
 
 footer {

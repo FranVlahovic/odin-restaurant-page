@@ -7,7 +7,8 @@ import freshImageThree from './img/fresh3.jpg';
 import freshImageFour from './img/fresh4.jpg';
 import freshImageFive from './img/fresh5.jpg';
 import freshImageSix from './img/fresh6.jpg';
-
+import chef from './img/chef.jpg';
+import team from './img/team.jpg';
 
 const createContentHeader = (imgSrc, imgAlt, headingText) => {
     const headerContainer = document.createElement("div");
@@ -130,10 +131,10 @@ const renderAbout = () => {
         teamContainer.classList.add("team-container");
 
         const teamHeading = document.createElement("h1");
-        teamHeading.textContent = "Our Team";
+        teamHeading.textContent = "Meet Our Team";
 
         const teamImage = document.createElement("img");
-        teamImage.src = 
+        teamImage.src = team;
         teamImage.alt = "Restaurant Staff"
 
         const teamParagraph = document.createElement("p");
@@ -151,19 +152,37 @@ const renderAbout = () => {
         const chefParagraph = document.createElement("p");
         chefParagraph.textContent = "Marco Rossi, our esteemed chef at Dieci Piatti, hails from the heart of Tuscany. Growing up in Montepulciano, he was inspired by his grandmother's traditional recipes and the rich culinary heritage of Italy. With over 20 years of experience in renowned kitchens, Chef Marco brings a passion for fresh, locally-sourced ingredients and innovative takes on classic dishes. His dedication to authenticity and quality transforms simple ingredients into unforgettable meals, making every dining experience at Dieci Piatti a celebration of Italian cuisine.";
 
+        const chefParagraphTwo = document.createElement("p");
+        chefParagraphTwo.textContent = "Beyond the kitchen, Chef Marco is dedicated to nurturing the next generation of culinary talent. He frequently hosts cooking workshops and seminars, sharing his extensive knowledge and passion for Italian cuisine. His approachable nature and willingness to mentor have made him a beloved figure both within Dieci Piatti and the broader culinary community. Chef Marco believes that great cooking is a blend of tradition and innovation, and he constantly encourages his team to explore new flavors while honoring classic techniques. This philosophy ensures that Dieci Piatti remains at the forefront of authentic Italian dining.";
+
         const chefImage = document.createElement("img");
-        chefImage.src = 
+        chefImage.src = chef;
         chefImage.alt = "Chef Image";
+
+        chefSubContainer.appendChild(chefHeading);
+        chefSubContainer.appendChild(chefParagraph);
+        chefSubContainer.appendChild(chefParagraphTwo);
+        chefContainer.appendChild(chefSubContainer);
+        chefContainer.appendChild(chefImage);
+        teamContainer.appendChild(teamImage);
+        teamContainer.appendChild(teamHeading);
+        teamContainer.appendChild(teamParagraph);
+        teamContainer.appendChild(chefContainer);
+
+        return teamContainer;
 
     };
 
     const aboutHeader = createContentHeader(restaurantTerrace, "Restaurant Terrace", "ABOUT US");
     const aboutHistory = createAboutHistory();
     const aboutFresh = createAboutFresh();
+    const aboutTeam = createAboutTeam();
 
     contentContainer.appendChild(aboutHeader);
-    contentContainer.appendChild(aboutHistory);
+    contentContainer.appendChild(aboutTeam);
     contentContainer.appendChild(aboutFresh);
+    contentContainer.appendChild(aboutHistory);
+    
 };
 
 export default renderAbout;
