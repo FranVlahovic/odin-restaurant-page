@@ -4,6 +4,10 @@ import cacioepepeImage from './img/home-cacioepepe.jpeg';
 import carbonaraImage from './img/home-carbonara.jpg';
 import reservationImage from './img/home-reservation.jpg';
 import renderAbout from './about';
+import renderMenu from './menu';
+import renderContact from './contact';
+import { scrollToTop } from './index';
+
 
 const renderHome = () => {
     const contentContainer = document.querySelector("#content");
@@ -31,7 +35,7 @@ const renderHome = () => {
         const storyButton = document.createElement("button");
         storyButton.classList.add("learn-more-button");
         storyButton.textContent = "LEARN MORE";
-        storyButton.addEventListener("click", renderAbout);
+        storyButton.addEventListener("click", () => { renderAbout(); scrollToTop(); });
 
         storyContainer.appendChild(storyHeading);
         storyContainer.appendChild(storyParagraph);
@@ -76,6 +80,7 @@ const renderHome = () => {
         const featuredButton = document.createElement("button");
         featuredButton.classList.add("view-all");
         featuredButton.textContent = "VIEW ALL";
+        featuredButton.addEventListener("click", () => { renderMenu(); scrollToTop(); });
 
         homeFeatured.appendChild(featuredHeading);
         homeFeatured.appendChild(featuredContainer);
@@ -159,6 +164,7 @@ const renderHome = () => {
         const reservationButton = document.createElement("button");
         reservationButton.classList.add("home-reservation-button");
         reservationButton.textContent = "MAKE RESERVATION";
+        reservationButton.addEventListener("click", () => { renderContact(); scrollToTop(); }); 
 
         reservationContainer.appendChild(reservationHeading);
         reservationContainer.appendChild(reservationParagraph);

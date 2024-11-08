@@ -4,6 +4,12 @@ import carbonara from './img/home-carbonara.jpg';
 import cacioepepe from './img/home-cacioepepe.jpeg';
 import bolognese from './img/home-bolognese.jpg';
 import arrabbiata from './img/arrabbiata.jpg';
+import lasagna from './img/lasagna.jpg';
+import norma from './img/norma.jpg';
+import vongole from './img/vongole.jpg';
+import orecchiette from './img/orecchiette.jpg';
+import pesto from './img/pesto.jpg';
+import truffle from './img/tartufo.jpg';
 
 const renderMenu = () => {
     const contentContainer = document.querySelector("#content");
@@ -43,6 +49,53 @@ const renderMenu = () => {
                 price: "€10",
                 text: "Pasta, garlic, olive oil, red chili peppers, tomatoes, parsley."
             },
+            {   
+                src: lasagna,
+                alt: "Lasagna",
+                name: "LASAGNA",
+                price: "€15",
+                text: "Pasta, ground beef, tomatoes, ricotta cheese, mozzarella cheese, Parmesan cheese, béchamel sauce, onions, garlic, olive oil, salt, pepper."
+            },
+            {   
+                src: norma,
+                alt: "Pasta Norma",
+                name: "NORMA",
+                price: "€12",
+                text: "Pasta, eggplant, tomatoes, ricotta salata cheese, garlic, basil, olive oil, salt, pepper."
+            },
+            {   
+                src: vongole,
+                alt: "Pasta Vongole",
+                name: "VONGOLE",
+                price: "€14",
+                text: "Pasta, fresh clams, garlic, olive oil, white wine, parsley, lemon."
+            },
+            {   
+                src: orecchiette,
+                alt: "Pasta Orecchiette",
+                name: "ORECCHIETTE",
+                price: "€11",
+                text: "Orecchiette pasta, turnip greens, garlic, anchovies, red chili flakes, olive oil, Pecorino Romano cheese."
+            },
+            {   
+                src: pesto,
+                alt: "Pasta Pesto",
+                name: "PESTO",
+                price: "€13",
+                text: "Pasta, fresh basil, pine nuts, garlic, Parmesan cheese, Pecorino Romano cheese, olive oil, salt."
+            },
+            {   
+                src: truffle,
+                alt: "Pasta Truffle",
+                name: "TRUFFLE",
+                price: "€20",
+                text: "Pasta, truffle oil, fresh truffles, Parmesan cheese, garlic, olive oil, salt, pepper."
+            },
+
+
+
+            
+
     
         ];
     

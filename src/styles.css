@@ -360,16 +360,17 @@ h1 {
     height: 28rem;
     max-width: 20rem;
     border: 2px solid var(--font-primary);
-    border-radius: 0em 0em 2em 2em;
+    border-radius: 1em;
 }
 .menu-card img {
     object-fit: cover;
     height: 70%;
+    border-radius: 0.7em 0.7em 0em 0em;
 }
 .card-info {
     display: grid;
     padding: 1em;
-    gap: 1em;
+    gap: 0.5em;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.5fr 0.5fr;
 }
