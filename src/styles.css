@@ -19,6 +19,8 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body {
@@ -31,8 +33,10 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto auto;
   height: 100vh;
-
+  overflow-x: hidden;
 }
+
+/*Header Section*/
 
 header {
   display: flex;
@@ -108,6 +112,8 @@ nav button:hover {
   gap: 4em;
 }
 
+/*Home Section*/
+
 .home-restaurant {
     width: 100%;
     height: 60rem;
@@ -135,6 +141,10 @@ nav button:hover {
     align-items: center;
     padding: 3em 0 3em 0;
     
+}
+
+.home-reservation-img {
+    margin: 0;
 }
 .home-story {
     position: relative;
@@ -270,7 +280,9 @@ h1 {
     font-size: 3.5em;
 }
 
-.history-container, .fresh-container, .team-container {
+/* About Section */
+
+.history-container, .fresh-container, .team-container, .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,7 +292,7 @@ h1 {
 }
 
 
-.history-container p, .fresh-products p, .team-container p {
+.history-container p, .fresh-products p, .team-container p, .contact-info-container p {
     font-size: 1.4em;
     line-height: 2em;
     color: var(--main-second-color);
@@ -308,6 +320,7 @@ h1 {
     height: 40rem; 
     object-fit: cover;
 }
+
 
 .team-container img {
     height: 60rem;
@@ -345,6 +358,7 @@ h1 {
     padding: 2em 0em 3em 0em;
 }
 
+/* Menu Section */
 .menu-cards {
     border: 2px solid var(--font-primary);
     padding: 3em 2em;
@@ -364,6 +378,7 @@ h1 {
 }
 .menu-card img {
     object-fit: cover;
+    width: 100%;
     height: 70%;
     border-radius: 0.7em 0.7em 0em 0em;
 }
@@ -396,9 +411,65 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+/*Contact Section*/
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.contact-container h2 {
+    color: var(--font-primary);
+    font-size: 2em;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 1em;
+}
+.reservation-form label {
+    color: var(--main-second-color);
+    font-weight: 600;
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.reservation-form input {
+    font-size: 1.2em;
+    padding: 0.7em;
+    background-color: transparent;
+    border: 2px solid var(--font-primary);
+    border-radius: 0.5em;
+    color: var(--main-second-color);
+}
+.reservation-form button {
+    padding: 1em;
+    background-color: var(--font-primary);
+    align-self: center;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    width: 40%;
+    font-weight: bold;
+    margin-top: 1em;
+}
+.contact-info-container {
+    width: 30%;
+}
+.contact-info-container a {
+    display: inline;
+    color: var(--main-second-color);
+}
+.contact-info-container h4 {
+    color: var(--font-primary);
+}
+.contact-info-container h2 {
+    color: var(--main-second-color);
+}
 
 
-
+/*Footer Section*/
 footer {
   background-color: var(--main-blue-color);
   display: flex;
@@ -491,4 +562,407 @@ a:visited {
     width: 12%;
     display: inline-block;
     filter: var(--icons-second-color);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        font-size: 0.8em;
+        position: absolute;
+    }
+    .home-story {
+        padding: 0em 3em;
+    }
+    .story-container {
+        width: 100%;
+    }
+    .home-featured h1 {
+        padding: 0em 0em;
+        font-size: 2.5em;
+        align-self: center;
+    }
+    .home-featured {
+        padding: 2em 0em;
+        width: 100%;
+        
+    }
+    .featured-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .featured-container img {
+        height: 50rem;
+        
+    }
+    .home-reviews h1 {
+        padding: 0em 2em;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .customer-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        padding: 0em 2em;
+    }
+    .customer-card {
+        width: 70%;
+    }
+    .home-reservation {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .home-reservation-img {
+        height: 30rem;
+    }
+    .reservation-container {
+        width: 100%;
+        padding: 0em 2em;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding: 2em 0em;
+    }
+
+    .footer-section {
+        width: 100%;
+        border-left: none;
+        padding-top: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-top: 2px solid var(--font-primary);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 2em;
+    }
+
+    .footer-nav-buttons {
+        align-items: center;
+        gap: 2em;
+    }
+    .footer-nav-buttons button {
+        font-size: 1em;
+    }
+
+    .footer-socials img {
+        width: 2rem;
+    }
+
+    .copyright {
+        width: 100%;
+    }
+    .copyright a {
+        width: 50%;
+    }
+    .copyright img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .content-header-container h1 {
+        display: flex;
+        align-self: flex-end;
+        padding-bottom: 2em;
+    }
+
+    .team-container {
+        padding: 3em 2em;
+        width: 100%;
+        text-align: left;
+    }
+    .team-container img {
+        height: 30rem;
+    }
+    .chef-container, .chef-sub-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        gap: 1em;
+    }
+    .fresh-container, .history-container {
+        padding: 0em 2em;
+        width: 100%;
+    }
+    .fresh-products {
+        width: 100%;
+        text-align: left;
+    }
+    .fresh-products-gallery {
+        display: flex;
+        flex-direction: column;
+    }
+    .fresh-products-gallery img {
+        height: 30rem;
+    }
+    .history-container {
+        padding-bottom: 2em;
+    }
+    .history-container img {
+        height: 25rem;
+        object-fit: cover;
+    }
+    #content {
+        width: 100%;
+    }
+    .menu-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card img {
+        width: 100%;
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0em 2em;
+        padding-bottom: 2em;
+        gap: 3em;
+    }
+
+    .reservation-form {
+        width: 100%;
+    }
+    .reservation-form button {
+        align-self: center;
+        width: 20rem;
+    }
+
+    .contact-info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info-container p {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4em;
+        position: absolute;
+    } 
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        gap: 2em;
+    }
+    .header-social-media {
+        display: none;
+    }
+    .header-logo { 
+        font-size: 2.5em;
+    }
+    .home-story, .home-featured {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em 3em;
+    }
+    
+    .story-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .home-featured h1 {
+        padding: 0em 0em;
+        font-size: 2.5em;
+        align-self: center;
+    }
+    .home-featured {
+        padding: 2em 0em;
+        
+    }
+    .featured-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .featured-container img {
+        height: 40rem;
+    }
+
+    .home-reviews h1 {
+        padding: 0em 2em;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .customer-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        padding: 0em 2em;
+    }
+    .customer-card {
+        width: 90%;
+    }
+
+    .home-reservation {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .home-reservation-img {
+        height: 30rem;
+    }
+    .reservation-container {
+        width: 100%;
+        padding: 0em 2em;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding: 2em 0em;
+    }
+
+    .footer-section {
+        width: 100%;
+        border-left: none;
+        padding-top: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-top: 2px solid var(--font-primary);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 2em;
+    }
+
+    .footer-nav-buttons {
+        align-items: center;
+        gap: 2em;
+    }
+    .footer-nav-buttons button {
+        font-size: 1em;
+    }
+
+    .copyright a {
+        width: 50%;
+    }
+    .copyright img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-header-container h1 {
+        display: flex;
+        align-self: flex-end;
+        padding-bottom: 2em;
+    }
+
+    .team-container {
+        padding: 3em 2em;
+        width: 100%;
+        text-align: left;
+    }
+    .team-container img {
+        height: 30rem;
+    }
+    .chef-container, .chef-sub-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        gap: 1em;
+    }
+    .fresh-container, .history-container {
+        padding: 0em 2em;
+        width: 100%;
+    }
+    .fresh-products {
+        width: 100%;
+        text-align: left;
+    }
+    .fresh-products-gallery {
+        display: flex;
+        flex-direction: column;
+    }
+    .fresh-products-gallery img {
+        height: 30rem;
+    }
+    .history-container {
+        padding-bottom: 2em;
+    }
+    .history-container img {
+        height: 25rem;
+        object-fit: cover;
+    }
+    
+    .menu-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card img {
+        width: 100%;
+    }
+
+    .main-gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5em;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0em 2em;
+        padding-bottom: 2em;
+        gap: 3em;
+    }
+
+    .reservation-form {
+        width: 100%;
+    }
+    .reservation-form button {
+        align-self: center;
+        width: 20rem;
+    }
+
+    .contact-info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info-container p {
+        width: 100%;
+    }
+
+
 }
