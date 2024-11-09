@@ -7,11 +7,8 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/FranVlahovic/odin-restaurant-page">
-    <img src="images/logo.png" alt="Logo" width="100" height="100">
-  </a>
+![Dieci-Piatti-11-09-2024_11_01_PM](https://github.com/user-attachments/assets/654c0481-0309-4425-a10b-b74cba796c6a)
+
 
   <h3 align="center">Odin Restaurant Page</h3>
 
@@ -21,7 +18,7 @@
     <a href="https://github.com/FranVlahovic/odin-restaurant-page"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://your-live-demo-link.com">View Demo</a>
+    <a href="https://franvlahovic.github.io/odin-restaurant-page/">View Demo</a>
     ·
     <a href="https://github.com/FranVlahovic/odin-restaurant-page/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -46,8 +43,14 @@
 - [Acknowledgments](#acknowledgments)
 
 ## About The Project
+![Dieci-Piatti-11-09-2024_11_01_PM](https://github.com/user-attachments/assets/7daa64ce-2405-41ad-ad85-441f0626b54a)
+![Dieci-Piatti-11-09-2024_11_01_PM (2)](https://github.com/user-attachments/assets/cab91376-b889-4560-9003-aaaa1f6887a0)
+![Dieci-Piatti-11-09-2024_11_01_PM (3)](https://github.com/user-attachments/assets/cf1def5e-ed8f-4a70-8cb0-bcb16d5e6bf7)
+![Dieci-Piatti-11-09-2024_11_03_PM](https://github.com/user-attachments/assets/61cd2a2d-ae06-40ae-837e-c2f9d99e78ba)
+![Dieci-Piatti-11-09-2024_11_04_PM](https://github.com/user-attachments/assets/d67df469-cbc0-4410-9c32-0295a1e0aca1)
+![Dieci-Piatti-11-09-2024_11_05_PM](https://github.com/user-attachments/assets/e857770f-c0cb-4f23-90c6-94f2d8a5f2ea)
 
-[![Product Screenshot][product-screenshot]](https://your-live-demo-link.com)
+
 
 The **Odin Restaurant Page** project is a single-page application designed to emulate a restaurant website. This project showcases core front-end development skills, including HTML, CSS, and JavaScript, and incorporates JavaScript modules and DOM manipulation techniques. Developed as part of The Odin Project curriculum, this project is a fun, hands-on way to practice interactive design.
 
@@ -148,5 +151,3 @@ Project Link: [https://github.com/FranVlahovic/odin-restaurant-page](https://git
 [license-url]: https://github.com/FranVlahovic/odin-restaurant-page/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-blue.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/franvlahovic
-[product-screenshot]: images/screenshot.png
-```
